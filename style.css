@@ -1,0 +1,60 @@
+html,body{
+    height: 100%;
+    margin: 0;
+}
+
+nav{
+    display: flex;
+    height: 10%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: #EA526F;
+}
+
+main{
+    height: 90%;
+    background-color: #585B56;
+}
+
+.titre{
+    display: flex;
+    justify-content: center;
+}
+
+#conteneur{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#instruction{
+    display: flex;
+    justify-content: center;
+    background-color: #585B56;
+    color: white;
+}
+
+#user{
+    display: flex;
+    justify-content: center;
+}
+
+#saisie{
+    display: flex;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#mot{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.lettre{
+    display: flex;
+    height: 100px;
+}
