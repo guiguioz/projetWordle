@@ -54,7 +54,7 @@ main{
     justify-content: center;
 }
 
-.lettre{
+.lettreDiv{
     display: flex;
     height: 200px;
     margin: 2%;
