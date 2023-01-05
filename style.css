@@ -1,0 +1,41 @@
+html,body{
+    height: 100%;
+    margin: 0;
+}
+
+nav{
+    display: flex;
+    height: 10%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: #EA526F;
+}
+
+main{
+    height: 90%;
+    background-color: #585B56;
+}
+
+.titre{
+    display: flex;
+    justify-content: center;
+}
+
+#conteneur{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+#instruction{
+    background-color: #585B56;
+    color: white;
+}
+
+#mot{
+    display: flex;
+    flex-direction: row;
+}
