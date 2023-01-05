@@ -12,12 +12,12 @@ nav{
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    background-color: #0479C5;
+    background-color: #6b9080;
 }
 
 main{
     height: 90%;
-    background-color: #45545F;
+    background-color: #a4c3b2;
 }
 
 .titre{
@@ -45,7 +45,7 @@ main{
     display: flex;
     margin-right: 1%;
     margin-bottom: 1%;
-    border: 2px solid #FEB70C;
+    border: 2px solid #cce3de;
 }
 
 #mot{
@@ -58,5 +58,5 @@ main{
     display: flex;
     height: 200px;
     margin: 2%;
-    border: 2px solid #FEB70C;
+    border: 2px solid #cce3de;
 }
