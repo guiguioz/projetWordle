@@ -60,24 +60,3 @@ main{
     margin: 2%;
     border: 2px solid #cce3de;
 }
-
-table>tr{
-    vertical-align: middle;
-}
-
-tr{
-    display: table-row;
-    vertical-align: inherit;
-    border-color: blue;
-}
-
-.grille table{
-    border-spacing: 0;
-    background-color: antiquewhite;
-}
-
-table{
-    border-collapse: separate;
-    text-indent: initial;
-    border-spacing: 2px;
-}
