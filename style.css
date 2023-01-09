@@ -82,4 +82,13 @@ button{
     background-color: #6b9080;
 }
 
+#success{
+    display: flex;
+    justify-content: center;
+}
 
+#music{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}

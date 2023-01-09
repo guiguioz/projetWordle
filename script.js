@@ -24,7 +24,6 @@ console.log(motGenere)
 
 bouton.addEventListener("click",valideSaisie)
 
-
 function valideSaisie(){
     let motSaisieA = motSaisie.value.split('')
     for(let i=0; i<motSaisieA.length; i++){
@@ -105,13 +104,10 @@ function success(){
     }
 }
 
-/*let input = document.querySelector("#boutonValider");
 motSaisie.addEventListener("keypress", function (event) {
     if (event.key === 13) {
-        document.getElementById("boutonValider").click()
+        document.getElementById("bouton").click()
         console.log("enter",event.key)
-        // event.preventDefault();
-        // document.querySelector("#boutonValider").click();
+        event.preventDefault();
     }
-})*/
-
+})
