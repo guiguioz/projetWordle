@@ -34,11 +34,15 @@ function valideSaisie(){
 let splitMotGenere = motGenere.split('')
 console.log(splitMotGenere)
 
+let lettreMorte =[]
+
 function comparateur(motSaisieA){
     for(let i=0 ; i<motSaisieA.length; i++){
         if(!splitMotGenere.includes(motSaisieA[i])){
             console.warn(motSaisieA[i],"n'est pas dans le mot")
             lettreDiv[i].style.backgroundColor = "red"
+            lettreMorte.push(motSaisieA[i])
+            console.log(lettreMorte)
         }else{
             let goodLettre = splitMotGenere.indexOf(motSaisieA[i])
             if(goodLettre===motSaisieA.indexOf(motSaisieA[i])){
