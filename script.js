@@ -6,7 +6,7 @@ let lettreDiv = document.querySelectorAll(".lettreDiv")
 let mot = document.querySelector("#mot")
 let image = document.querySelector("#success")
 let lettre = document.querySelectorAll("#lettre")
-let valider = document.querySelector("#boutonValider")
+let conteneur = document.querySelector("#conteneur")
 
 
 const bdd =
@@ -73,10 +73,10 @@ function lettreFail (){
     // si la div existe déjà, je la supprime pour ne pas additioner les lettres
     const lettreMorteExistante = document.querySelector('.lettre-morte')
     if(lettreMorteExistante){
-        mot.removeChild(lettreMorteExistante)
+        conteneur.removeChild(lettreMorteExistante)
     }
     let lettreMorteDiv = document.createElement("div")
-    mot.appendChild(lettreMorteDiv)
+    conteneur.appendChild(lettreMorteDiv)
     lettreMorteDiv.classList.add('lettre-morte')
     lettreMorteDiv.style.display = "block"
     lettreMorteDiv.style.borderRadius = "5px"
@@ -101,9 +101,19 @@ function nbTentatives(){
 function success(){
     if(motSaisie.value==motGenere){
         image.src="img/gifsuccess.gif"
-        mot.removeChild("div.lettre-morte")
+        let lettreMorteDiv2 = document.querySelector(".lettre-morte") 
+        conteneur.removeChild(lettreMorteDiv2)
     }
 }
+
+function reset(){
+        compteur=0
+        motAleatoire()
+        valideSaisie()
+        comparateur(motSaisieA)
+    
+}
+
 
 /*let input = document.querySelector("#boutonValider");
 motSaisie.addEventListener("keypress", function (event) {
