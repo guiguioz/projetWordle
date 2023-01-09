@@ -23,7 +23,8 @@ bouton.addEventListener("click",valideSaisie)
 
 document.addEventListener("keyup", function(event) {
     if (event.key === 'Enter') {
-        console.log('Enter is pressed!');
+        valideSaisie("#boutonValider").click()
+        console.log('Enter is pressed!')
     }
 });
  
@@ -39,7 +40,3 @@ function valideSaisie(){
 const newd = bdd.map(x => x.split(''));
 console.log(newd)
 
-
-function remplissage(){
-
-}

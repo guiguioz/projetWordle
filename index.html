@@ -23,8 +23,20 @@
             <button><img src="img/help.png" alt="" id="help"></button>
         </div>
     </nav>
-
     <main>
+        <dialog id="modal" class="modal">
+            <h2>Règles du jeu</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea architecto quia, ipsum asperiores
+                maiores quaerat eos libero! Sapiente iste quaerat autem hic doloribus modi accusamus, maxime perferendis
+                officia placeat, molestias ratione aspernatur ullam. Vitae praesentium harum rem sapiente a rerum qui
+                repellat, velit dolorum cumque tempora aliquam error sint dolore veniam? Culpa magnam mollitia
+                voluptatibus tenetur soluta vel dignissimos facere exercitationem ullam, repudiandae nobis, rem
+                architecto ipsam nam praesentium dolorem ut aliquid impedit! Placeat natus asperiores quisquam non
+                facere, doloremque commodi tempora tempore exercitationem labore optio dignissimos doloribus tenetur
+                modi sapiente cumque possimus temporibus? Corrupti accusamus provident atque nam.</p>
+            <button class="button close-button">close modal</button>
+        </dialog>
+        </div>
         <div id="conteneur">
             <div id="instruction">
                 <h3>Tapez votre mot..</h3>
@@ -41,10 +53,10 @@
 
             <div id="mot">
                 <div class="lettreDiv">
-                   A
+                    A
                 </div>
                 <div class="lettreDiv">
-                   B
+                    B
                 </div>
                 <div class="lettreDiv">
                     C
@@ -54,12 +66,16 @@
                 </div>
                 <div class="lettreDiv">
                     E
+                </div>
             </div>
-        </div>
-        <audio autoplay controls loop>
-            <source src="./media/sound.ogg" type="audio/ogg">
-            <source src="./sound/motus.mp3" type="audio/mpeg">
-        </audio>
+            <audio controls loop id="Gagné !">
+                <source src="./media/sound.ogg" type="audio/ogg">
+                <source src="./sound/motus.mp3" type="audio/mpeg">
+            </audio>
+            <audio autoplay controls loop id="Ascenseur">
+                <source src="./media/sound.ogg" type="audio/ogg">
+                <source src="./sound/musique d'ascenseur.mp3" type="audio/mpeg">
+            </audio>
     </main>
 
     <script src="script.js"></script>
