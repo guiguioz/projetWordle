@@ -5,15 +5,17 @@ let motSaisie = document.querySelector("#texte")
 let lettreDiv = document.querySelectorAll(".lettreDiv")
 let mot = document.querySelector("#mot")
 let image = document.querySelector("#success")
+let lettre = document.querySelectorAll("#lettre")
+let valider = document.querySelector("#boutonValider")
 
 
-const bdd = 
-    ["pomme","homme","femme","prout","sapin","jouet","chien","sexes","route","neige"]
+const bdd =
+    ["pomme", "homme", "femme", "prout", "sapin", "jouet", "chien", "sexes", "route", "neige"]
 
 console.log(bdd)
 
-function motAleatoire(){
-    const rdm = Math.floor(Math.random()*bdd.length)
+function motAleatoire() {
+    const rdm = Math.floor(Math.random() * bdd.length)
     console.log(rdm)
     return bdd[rdm]
 }
@@ -83,6 +85,8 @@ function lettreFail (){
     lettreMorteDiv.textContent = lettreMorte
 }
 
+// bouton.addEventListener("click", valideSaisie)
+
 
 
 function nbTentatives(){
@@ -100,3 +104,14 @@ function success(){
         mot.removeChild("div.lettre-morte")
     }
 }
+
+/*let input = document.querySelector("#boutonValider");
+motSaisie.addEventListener("keypress", function (event) {
+    if (event.key === 13) {
+        document.getElementById("boutonValider").click()
+        console.log("enter",event.key)
+        // event.preventDefault();
+        // document.querySelector("#boutonValider").click();
+    }
+})*/
+
