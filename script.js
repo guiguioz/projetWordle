@@ -3,6 +3,7 @@ console.log("hello")
 let bouton = document.querySelector("#bouton")
 let motSaisie = document.querySelector("#texte")
 let lettreDiv = document.querySelectorAll(".lettreDiv")
+let mot = document.querySelector("#mot")
 
 
 const bdd = 
@@ -36,43 +37,49 @@ console.log(splitMotGenere)
 
 let lettreMorte =[]
 
+
+
 function comparateur(motSaisieA){
     for(let i=0 ; i<motSaisieA.length; i++){
+
         if(!splitMotGenere.includes(motSaisieA[i])){
             console.warn(motSaisieA[i],"n'est pas dans le mot")
             lettreDiv[i].style.backgroundColor = "red"
-            lettreMorte.push(motSaisieA[i])
-            console.log(lettreMorte)
-        }else{
+            console.log(motSaisieA[i])
+        
+            if(lettreMorte.includes(motSaisieA[i])){
+                const id = lettreMorte.indexOf(motSaisieA[i]);
+                lettreMorte.splice(id, 1)
+            }
+            if(!lettreMorte.includes(motSaisieA[i])){
+                lettreMorte.push(motSaisieA[i])
+            }
+        }
+        if(splitMotGenere.includes(motSaisieA[i])){
             let goodLettre = splitMotGenere.indexOf(motSaisieA[i])
             if(goodLettre===motSaisieA.indexOf(motSaisieA[i])){
-                console.warn(motSaisieA[i],"est dans le mot")
+                console.warn(motSaisieA[i],"est dans le mot et bien placé")
                 lettreDiv[i].style.backgroundColor = "green"  
             }else{
-                console.warn(motSaisieA[i],"n'est pas bien placé")
+                console.warn(motSaisieA[i],"est dans le mot mais pas bien placé")
                 lettreDiv[i].style.backgroundColor = "yellow"
             }
         }
-        
+     
     }
+
+    
+    lettreFail()
+    lettreMorte = [];
 }
 
-
-
-/*function separateur (){
-    let splitBddA
-    //let splitBddB
-    for(let i=0; i<splitBdd.length; i++){
-    splitBddA = splitBdd[i]
-    console.log(splitBddA)
-        /*for(let j=0; j<splitBddA.length; j++){
-            let splitBddB= splitBddA[j]
-        console.log(splitBddB)
-        
-        }
-    }
-    return splitBddA
+function lettreFail (){
+    let lettreMorteDiv = document.createElement("div")
+    mot.appendChild(lettreMorteDiv)
+    lettreMorteDiv.style.display = "block"
+    lettreMorteDiv.style.borderRadius = "5px"
+    lettreMorteDiv.style.border = "1px solid black"
+    lettreMorteDiv.style.backgroundColor = "red"
+    lettreMorteDiv.textContent = lettreMorte
 }
 
-let motGenereSplit = separateur()
-console.log(motGenereSplit)*/
