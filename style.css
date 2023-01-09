@@ -86,11 +86,3 @@ button{
     border: 5px solid #cce3de;
     background-color: #6b9080;
 }
-
-
-.modal{
-    padding: 1em;
-    max-width: 50ch;
-    margin: 0 0 0.5rem 0;
-}
-
