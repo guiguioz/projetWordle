@@ -4,6 +4,7 @@ let bouton = document.querySelector("#bouton")
 let motSaisie = document.querySelector("#texte")
 let lettreDiv = document.querySelectorAll(".lettreDiv")
 let mot = document.querySelector("#mot")
+let image = document.querySelector("#success")
 
 
 const bdd = 
@@ -36,6 +37,7 @@ let splitMotGenere = motGenere.split('')
 console.log(splitMotGenere)
 
 let lettreMorte =[]
+let compteur = 6
 
 
 
@@ -45,15 +47,9 @@ function comparateur(motSaisieA){
         if(!splitMotGenere.includes(motSaisieA[i])){
             console.warn(motSaisieA[i],"n'est pas dans le mot")
             lettreDiv[i].style.backgroundColor = "red"
-            console.log(motSaisieA[i])
-        
-            if(lettreMorte.includes(motSaisieA[i])){
-                const id = lettreMorte.indexOf(motSaisieA[i]);
-                lettreMorte.splice(id, 1)
-            }
             if(!lettreMorte.includes(motSaisieA[i])){
                 lettreMorte.push(motSaisieA[i])
-            }
+            }console.log(lettreMorte)
         }
         if(splitMotGenere.includes(motSaisieA[i])){
             let goodLettre = splitMotGenere.indexOf(motSaisieA[i])
@@ -65,17 +61,21 @@ function comparateur(motSaisieA){
                 lettreDiv[i].style.backgroundColor = "yellow"
             }
         }
-     
     }
-
-    
+    nbTentatives()
     lettreFail()
-    lettreMorte = [];
+    success()
 }
 
 function lettreFail (){
+    // si la div existe déjà, je la supprime pour ne pas additioner les lettres
+    const lettreMorteExistante = document.querySelector('.lettre-morte')
+    if(lettreMorteExistante){
+        mot.removeChild(lettreMorteExistante)
+    }
     let lettreMorteDiv = document.createElement("div")
     mot.appendChild(lettreMorteDiv)
+    lettreMorteDiv.classList.add('lettre-morte')
     lettreMorteDiv.style.display = "block"
     lettreMorteDiv.style.borderRadius = "5px"
     lettreMorteDiv.style.border = "1px solid black"
@@ -83,3 +83,20 @@ function lettreFail (){
     lettreMorteDiv.textContent = lettreMorte
 }
 
+
+
+function nbTentatives(){
+    compteur--
+    bouton.textContent="plus que "+compteur+" tentatives !!"
+    if(compteur==0){
+        bouton.textContent="you lose try again??"
+    }
+    
+}    
+
+function success(){
+    if(motSaisie.value==motGenere){
+        image.src="img/gifsuccess.gif"
+        mot.removeChild("div.lettre-morte")
+    }
+}
