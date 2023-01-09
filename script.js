@@ -1,9 +1,10 @@
 console.log("hello")
 
-let bouton = document.querySelector("#bouton")
+let bouton = document.querySelector("button")
 let motSaisie = document.querySelector("#texte")
-let lettreDiv = document.querySelectorAll("#lettreDiv")
-let lettre = document.querySelectorAll("#lettre")
+let lettreDiv = document.querySelectorAll(".lettreDiv")
+let lettre = document.querySelectorAll(".lettre")
+let lettre1 = document.querySelector("#lettre1")
 
 const bdd = 
     ["pomme","homme","femme","prout","sapin","jouet","chien","sexes","route","neige"]
@@ -15,17 +16,27 @@ function motAleatoire(){
     console.log(rdm)
     return bdd[rdm]
 }
-const motGenere = motAleatoire()
+let motGenere = motAleatoire()
 console.log(motGenere)
 
 bouton.addEventListener("click",valideSaisie)
 
+
 function valideSaisie(){
-    motSaisie.value = lettre[0].textContent
+    let motSaisieA = motSaisie.value.split('')
+    for(let i=0; i<motSaisieA.length; i++){
+   console.log(motSaisieA)
+   lettre[i].value = motSaisieA[i]
+    } 
+ 
 }
 
+let splitBdd = bdd.map(x => x.split(''));
+motGenere = splitBdd
+console.log(motGenere)
 
-const newd = bdd.map(x => x.split(''));
-console.log(newd)
+function comparateur(){
+    motGenere[1] = motSaisie[1]
+}
 
 
