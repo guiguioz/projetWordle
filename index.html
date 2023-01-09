@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="./img/logomotus.png">
+    <link rel="icon" type="image/x-icon" href="./img/logo_détouré.png">
     <title>CHMOD</title>
 </head>
 
@@ -14,13 +14,13 @@
 
     <nav>
         <div id="son">
-            <img src="img/volume_on.png" alt="" id="volume">
+            <button><img src="img/volume_on.png" alt="" id="volume"></button>
         </div>
         <div id="titre">
             <h1>Bienvenue sur CHMOD</h1>
         </div>
         <div id="règle">
-            <img src="img/help.png" alt="" id="help">
+            <button><img src="img/help.png" alt="" id="help"></button>
         </div>
     </nav>
 
@@ -32,33 +32,32 @@
 
             <div id="user">
                 <div id="saisie">
-                    <input type="text" name="" id="texte">
+                    <input type="text" name="" id="texte" maxlength="5" placeholder="Ecrivez ici">
                 </div>
-                <div id="bouton">
-                    <button>Valider</button>
+                <div>
+                    <button id="bouton">Valider</button>
                 </div>
             </div>
 
             <div id="mot">
                 <div class="lettreDiv">
-                    <input type="text" name="" id="lettre1" required class="lettre">
+                   A
                 </div>
                 <div class="lettreDiv">
-                    <input type="text" name="" id="lettre2" required class="lettre">
+                   B
                 </div>
                 <div class="lettreDiv">
-                    <input type="text" name="" id="lettre3" required class="lettre">
+                    C
                 </div>
                 <div class="lettreDiv">
-                    <input type="text" name="" id="lettre4" required class="lettre">
+                    D
                 </div>
                 <div class="lettreDiv">
-                    <input type="text" name="" id="lettre5" required class="lettre">
-                </div>
+                    E
             </div>
         </div>
         <audio autoplay controls loop>
-            <source src="/media/sound.ogg" type="audio/ogg">
+            <source src="./media/sound.ogg" type="audio/ogg">
             <source src="./sound/motus.mp3" type="audio/mpeg">
         </audio>
     </main>

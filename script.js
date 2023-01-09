@@ -1,10 +1,9 @@
 console.log("hello")
 
-let bouton = document.querySelector("button")
+let bouton = document.querySelector("#bouton")
 let motSaisie = document.querySelector("#texte")
 let lettreDiv = document.querySelectorAll(".lettreDiv")
-let lettre = document.querySelectorAll(".lettre")
-let lettre1 = document.querySelector("#lettre1")
+
 
 const bdd = 
     ["pomme","homme","femme","prout","sapin","jouet","chien","sexes","route","neige"]
@@ -25,18 +24,51 @@ bouton.addEventListener("click",valideSaisie)
 function valideSaisie(){
     let motSaisieA = motSaisie.value.split('')
     for(let i=0; i<motSaisieA.length; i++){
-   console.log(motSaisieA)
-   lettre[i].value = motSaisieA[i]
-    } 
- 
+        console.log(motSaisieA)
+        lettreDiv[i].textContent = motSaisieA[i]
+
+        } 
+    comparateur(motSaisieA)
 }
 
-let splitBdd = bdd.map(x => x.split(''));
-motGenere = splitBdd
-console.log(motGenere)
+let splitMotGenere = motGenere.split('')
+console.log(splitMotGenere)
 
-function comparateur(){
-    motGenere[1] = motSaisie[1]
+function comparateur(motSaisieA){
+    for(let i=0 ; i<motSaisieA.length; i++){
+        if(!splitMotGenere.includes(motSaisieA[i])){
+            console.warn(motSaisieA[i],"n'est pas dans le mot")
+            lettreDiv[i].style.backgroundColor = "red"
+        }else{
+            let goodLettre = splitMotGenere.indexOf(motSaisieA[i])
+            if(goodLettre===motSaisieA.indexOf(motSaisieA[i])){
+                console.warn(motSaisieA[i],"est dans le mot")
+                lettreDiv[i].style.backgroundColor = "green"  
+            }else{
+                console.warn(motSaisieA[i],"n'est pas bien placé")
+                lettreDiv[i].style.backgroundColor = "yellow"
+            }
+        }
+        
+    }
 }
 
 
+
+/*function separateur (){
+    let splitBddA
+    //let splitBddB
+    for(let i=0; i<splitBdd.length; i++){
+    splitBddA = splitBdd[i]
+    console.log(splitBddA)
+        /*for(let j=0; j<splitBddA.length; j++){
+            let splitBddB= splitBddA[j]
+        console.log(splitBddB)
+        
+        }
+    }
+    return splitBddA
+}
+
+let motGenereSplit = separateur()
+console.log(motGenereSplit)*/

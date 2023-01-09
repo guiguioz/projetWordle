@@ -4,7 +4,6 @@ html,body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
 }
-
 nav{
     display: flex;
     height: 10%;
@@ -12,40 +11,56 @@ nav{
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    background-color: #0479C5;
+    background-color: #6b9080;
 }
-
 main{
     height: 90%;
-    background-color: #45545F;
+    background-color: #a4c3b2;
+}
+
+#son{
+    cursor: pointer;
+}
+
+#règle{
+    cursor: pointer;
 }
 
 .titre{
     display: flex;
     justify-content: center;
 }
-
 #conteneur{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
 #instruction{
     display: flex;
     justify-content: center;
 }
-
 #user{
     display: flex;
     justify-content: center;
 }
-
 #saisie{
     display: flex;
     margin-right: 1%;
     margin-bottom: 1%;
-    border: 2px solid #FEB70C;
+    border: 2px solid #cce3de;
+    border-radius: 5px;
+    align-items: center;
+    color: #6b9080;
+}
+
+button{
+    border-radius: 5px;
+    align-items: center;
+    border: 10px;
+    color: #6b9080;
+    background-color: white;
+    font-size: large;
+    cursor: pointer;
 }
 
 #mot{
@@ -56,7 +71,13 @@ main{
 
 .lettreDiv{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
     height: 200px;
+    width: 100%;
     margin: 2%;
-    border: 2px solid #FEB70C;
+    border: 2px solid #cce3de;
+    border: 5px solid #cce3de;
+    background-color: #6b9080;
 }
