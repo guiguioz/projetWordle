@@ -81,5 +81,11 @@ button{
     border: 5px solid #cce3de;
     background-color: #6b9080;
 }
-
+#success{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 350px;
+    width: 280px;
+}
 

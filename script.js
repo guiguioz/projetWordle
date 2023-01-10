@@ -103,6 +103,7 @@ function success(){
         image.src="img/gifsuccess.gif"
         let lettreMorteDiv2 = document.querySelector(".lettre-morte") 
         conteneur.removeChild(lettreMorteDiv2)
+        
     }
 }
 
