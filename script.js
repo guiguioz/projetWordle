@@ -81,6 +81,10 @@ function lettreFail (){
     lettreMorteDiv.style.borderRadius = "5px"
     lettreMorteDiv.style.border = "1px solid black"
     lettreMorteDiv.style.backgroundColor = "red"
+    lettreMorteDiv.style.margin = "100px"
+    lettreMorteDiv.style.textAlign = "center"
+    lettreMorteDiv.style.width = "150px"
+    lettreMorteDiv.style.fontSize = "X-large"
     lettreMorteDiv.textContent = lettreMorte
 }
 
