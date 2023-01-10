@@ -81,6 +81,7 @@ button{
     border: 5px solid #cce3de;
     background-color: #6b9080;
 }
+
 #success{
   
     width: 480px;
@@ -91,4 +92,8 @@ button{
     align-self: center;
     justify-self: center;
 }
-
+#music{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
