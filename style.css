@@ -82,10 +82,13 @@ button{
     background-color: #6b9080;
 }
 #success{
+  
+    width: 480px;
+    padding-bottom: 10px;
+}
+#gif{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 350px;
-    width: 280px;
+    align-self: center;
+    justify-self: center;
 }
 

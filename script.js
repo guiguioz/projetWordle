@@ -103,6 +103,9 @@ function success(){
         image.src="img/gifsuccess.gif"
         let lettreMorteDiv2 = document.querySelector(".lettre-morte") 
         conteneur.removeChild(lettreMorteDiv2)
+        bouton.textContent = "yes zir!!"
+        bouton.style.backgroundColor = "#6b9080"
+        bouton.style.color ="white"
         
     }
 }
