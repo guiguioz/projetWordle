@@ -109,7 +109,7 @@ function success(){
     }
 }
 
-<<<<<<< HEAD
+
 function reset(){
         compteur=0
         motAleatoire()
@@ -120,12 +120,11 @@ function reset(){
 
 
 /*let input = document.querySelector("#boutonValider");
-=======
->>>>>>> 0bde4f494f3cb5885c359d0ef21a25bf9d56ccd6
+
 motSaisie.addEventListener("keypress", function (event) {
     if (event.key === 13) {
         document.getElementById("bouton").click()
         console.log("enter",event.key)
         event.preventDefault();
     }
-})
+})*/
