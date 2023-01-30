@@ -10,7 +10,7 @@ let conteneur = document.querySelector("#conteneur")
 
 
 const bdd =
-    ["pomme", "homme", "femme", "prout", "sapin", "jouet", "chien", "sexes", "route", "neige"]
+    ["pomme", "homme", "femme", "prout", "sapin", "jouet", "chien", "sexes", "route", "neige","balle","reste","texte","jeune","poste","tarot","blanc","rouge","joint","savon"]
 
 console.log(bdd)
 
