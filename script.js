@@ -57,7 +57,8 @@ function comparateur(motSaisieA){
             if(goodLettre===motSaisieA.indexOf(motSaisieA[i])){
                 console.warn(motSaisieA[i],"est dans le mot et bien placé")
                 lettreDiv[i].style.backgroundColor = "green"  
-            }else{
+            }
+            else{
                 console.warn(motSaisieA[i],"est dans le mot mais pas bien placé")
                 lettreDiv[i].style.backgroundColor = "yellow"
             }
@@ -77,7 +78,9 @@ function lettreFail (){
     let lettreMorteDiv = document.createElement("div")
     conteneur.appendChild(lettreMorteDiv)
     lettreMorteDiv.classList.add('lettre-morte')
-    lettreMorteDiv.style.display = "block"
+    lettreMorteDiv.style.display = "flex"
+    lettreMorteDiv.style.justifyContent = "center"
+    lettreMorteDiv.style.alignSelf = "center"
     lettreMorteDiv.style.borderRadius = "5px"
     lettreMorteDiv.style.border = "1px solid black"
     lettreMorteDiv.style.backgroundColor = "red"
@@ -122,6 +125,14 @@ function reset(){
     
 }
 
+function verifMot(mot){
+    let regex = /[aA-zZ]/g
+    if(mot.match(regex)==null){
+        console.log("veuillez saisir un mot valide")
+    }
+}
+
+verifMot("coucoé")
 
 /*let input = document.querySelector("#boutonValider");
 
