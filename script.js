@@ -126,13 +126,13 @@ function reset(){
 }
 
 function verifMot(mot){
-    let regex = /[aA-zZ]/g
+    let regex = /^[a-z]{1,}$/gm
     if(mot.match(regex)==null){
-        console.log("veuillez saisir un mot valide")
+        console.warn("veuillez saisir un mot valide")
     }
 }
 
-verifMot("coucoé")
+verifMot("lou.")
 
 /*let input = document.querySelector("#boutonValider");
 
