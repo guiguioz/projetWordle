@@ -132,7 +132,7 @@ function verifMot(mot){
     }
 }
 
-verifMot("lou.")
+verifMot()
 
 /*let input = document.querySelector("#boutonValider");
 
